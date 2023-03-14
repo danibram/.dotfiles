@@ -50,7 +50,6 @@ function symlink::link() {
 local -A dotfiles
 dotfiles=(
 	terminal/zshrc              ".zshrc"
-	modules/ohmytmux            ".tmux"
 	modules/ohmytmux/.tmux.conf ".tmux.conf"
 	cfg/tmux.conf.local         ".tmux.conf.local"
 	cfg/gitignore_global        ".gitignore_global"
@@ -84,3 +83,6 @@ if ! test -f "$GIT_LOCAL"; then
   touch $GIT_LOCAL
 	echo "📝 Edit ~/.gitconfig_local to add name and email"
 fi
+
+# Force load by default
+tmux source-file ~/.tmux.conf
