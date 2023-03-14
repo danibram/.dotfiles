@@ -1,0 +1,21 @@
+[user]
+	# These values are set in ~/.gitconfig_local
+[include]
+	path = ~/.gitconfig_local
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = code --wait
+	ignorecase = false
+[color]
+	ui = true
+[init]
+	defaultBranch = main
+[apply]
+	whitespace = fix
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+[pager]
+	branch = false
+	diff = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --pattern '^(Date|added|deleted|modified|renamed): '
+	show = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --pattern '^(Date|added|deleted|modified|renamed): '

@@ -1,0 +1,51 @@
+
+export DOTFILES_PATH=$HOME/.dotfiles
+
+# ZSH Ops
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FCNTL_LOCK
+# setopt autopushd
+
+# Async mode for autocompletion
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+ZSH_HIGHLIGHT_MAXLENGTH=300
+
+ulimit -n 200000
+ulimit -u 2048
+
+source $DOTFILES_PATH/terminal/aliases.sh
+source $DOTFILES_PATH/terminal/exports.sh
+source $DOTFILES_PATH/terminal/functions.sh
+
+# Extras non-public
+EXTRA_FOLDER="$HOME/.dotfiles-extra"
+EXTRA_FILES="$EXTRA_FOLDER/extra.sh"
+if test -f "$EXTRA_FILES"; then
+  source $EXTRA_FILES
+else
+  mkdir -p $HOME/.dotfiles-extra
+  touch $EXTRA_FILES
+fi
+
+source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+# Homebrew install path customization
+if ! command -v brew &>/dev/null; then
+    echo >&2 "Skipping homebrew initialization in shell."
+else
+    # brew shellenv exports HOMEBREW_PREFIX, PATH etc.
+    eval $(brew shellenv)
+    export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_INSECURE_REDIRECT=1
+fi
+
+if [[ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]]; then
+	source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+
+if [[ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]]; then
+	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"

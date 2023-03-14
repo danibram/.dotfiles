@@ -1,0 +1,5 @@
+
+[submodule "modules/ohmytmux"]
+	path = modules/ohmytmux
+	url = https://github.com/gpakosz/.tmux.git
+	ignore = dirty

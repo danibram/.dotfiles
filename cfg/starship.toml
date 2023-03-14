@@ -1,0 +1,45 @@
+format = """
+$cmd_duration\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$character\
+"""
+
+[directory]
+style = "bold"
+format = "[$path ]($style)"
+fish_style_pwd_dir_length = 1
+disabled = false
+
+[git_branch]
+style = ""
+format = '[\($branch\)]($style)'
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style)($ahead_behind$stashed)]($style)"
+style = "purple"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = ""
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = ""
+
+# End languages and tools #
+
+[cmd_duration]
+style = "none"
+format = '\[[⏱ $duration]($style)\] '
+
+[character]
+format = "$symbol "
+success_symbol = "[❯](#50fa7b)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+##? Setups the environment
+#?? 1.0.0
+##?
+##? Usage:
+##?    install
+
+echo "🚀 Welcome to the dotfiles installer!"
+echo "-------------------------------------------------"
+echo
+export DOTFILES_PATH="$HOME/.dotfiles"
+echo "👉  Cloning into: '$DOTFILES_PATH'"
+
+# To test that git is installed (if not macOS will prompt an installer)
+git --version
+
+git clone -q --depth 1 git@github.com:danibram/.dotfiles.git "$DOTFILES_PATH" || echo "already cloned!"
+
+cd "$HOME/.dotfiles" && git submodule update --init --recursive
+
+zsh $DOTFILES_PATH/init.zsh
