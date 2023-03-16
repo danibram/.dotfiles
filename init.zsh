@@ -74,6 +74,8 @@ if [[ $(uname -s) == "Darwin" ]]; then
 
   sh scripts/install-brew-apps.sh
 
+  sh scripts/osx-defaults.sh
+
   echo "🧐 Fixing paths in order to handle all with \$PATH"
   sudo truncate -s 0 /etc/paths
 fi
