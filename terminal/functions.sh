@@ -16,3 +16,7 @@ dots_update() {
 
   echo "[dots] Updated!"
 }
+
+ports() {
+  lsof -iTCP -sTCP:LISTEN -i -n -P | grep LISTEN | fzf
+}
