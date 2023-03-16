@@ -20,3 +20,7 @@ dots_update() {
 ports() {
   lsof -iTCP -sTCP:LISTEN -i -n -P | grep LISTEN | fzf
 }
+
+gch() {
+  git checkout "$(git branch | fzf| tr -d '[:space:]')"
+}
