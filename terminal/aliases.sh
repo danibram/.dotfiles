@@ -9,6 +9,7 @@ alias ...='cd ../..'
 alias ~='cd ~'
 alias dotfiles='cd $HOME/.dotfiles'
 alias j='z'
+alias ji='zi'
 
 alias ls='exa'
 alias l='exa -lbF --git'
