@@ -27,8 +27,6 @@ else
   touch $EXTRA_FILES
 fi
 
-source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
-
 # Homebrew install path customization
 if ! command -v brew &>/dev/null; then
     echo >&2 "Skipping homebrew initialization in shell."
