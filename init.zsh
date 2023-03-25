@@ -69,7 +69,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
 
   echo "⚡️ Installing brew if not installed"
   if ! [ -x "$(command -v brew)" ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
   sh scripts/install-brew-apps.sh
