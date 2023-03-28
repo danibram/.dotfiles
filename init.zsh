@@ -67,6 +67,16 @@ done
 
 if [[ $(uname -s) == "Darwin" ]]; then
 
+  echo "Installing Command Line Developer Tools if not installed"
+  if ! [ -d /Library/Developer/CommandLineTools ]; then
+    echo "🙏 Please, click on Install & Agree to accept the Command Line Developer Tools License Agreement"
+    sleep 1
+    xcode-select --install
+    read -rp "👀 Press enter once the installation finishes" not_needed_param
+  else
+    echo "✅ Command Line Developer Tools are already installed!"
+  fi
+
   echo "⚡️ Installing brew if not installed"
   if ! [ -x "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
