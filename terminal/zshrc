@@ -45,5 +45,13 @@ if [[ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]]; then
 	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
+if ! command -v zoxide &>/dev/null; then
+  echo >&2 "zoxide not installed."
+else
+  eval "$(zoxide init zsh)"
+fi
+if ! command -v starship &>/dev/null; then
+  echo >&2 "starship not installed."
+else
+  eval "$(starship init zsh)"
+fi

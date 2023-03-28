@@ -20,7 +20,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseOneFingerDoubleTapGesture 1
 
 # Tracking Speed: from 0 to 3
-defaults write -g com.apple.trackpad.scaling -float 3
+defaults write -g com.apple.trackpad.scaling -float 1
 
 # Enable tap to click for the current user and the login screen. (Don't have to press down on the trackpad -- just tap it.)
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true

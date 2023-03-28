@@ -43,3 +43,6 @@ format = "$symbol "
 success_symbol = "[❯](#50fa7b)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
+
+[line_break]
+disabled = true

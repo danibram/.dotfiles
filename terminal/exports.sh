@@ -6,26 +6,27 @@ export DENO_INSTALL="$HOME/.deno"
 export EDITOR="code --wait"
 
 paths=(
-  "$HOME/.yarn/bin"
-  "node_modules/.bin"
-  "/bin"
-  "/usr/local/bin"
-  "/usr/bin"
-  "/usr/local/sbin"
-  "/usr/sbin"
-  "/sbin"
-  "$ANDROID_HOME/emulator"
-  "$ANDROID_HOME/tools"
-  "$ANDROID_HOME/tools/bin"
-  "$ANDROID_HOME/platform-tools"
-  "$DENO_INSTALL/bin"
-  "$HOME/.fnm"
-  "$HOME/.zsh/bin",
-  "$HOME/.cargo/bin"
-  "/opt/homebrew/bin"
-  "/opt/homebrew/sbin"
-  "/opt/homebrew/opt/python/libexec/bin"
-  "$HOME/.cargo/env"
+  $HOME/.yarn/bin
+  $HOME/.config/yarn/global/node_modules/.bin
+  node_modules/.bin
+  /bin
+  /sbin
+  /usr/bin
+  /usr/sbin
+  /usr/local/bin
+  /usr/local/sbin
+  $ANDROID_HOME/emulator
+  $ANDROID_HOME/tools
+  $ANDROID_HOME/tools/bin
+  $ANDROID_HOME/platform-tools
+  $DENO_INSTALL/bin
+  $HOME/.fnm
+  $HOME/.zsh/bin,
+  /opt/homebrew/bin
+  /opt/homebrew/sbin
+  /opt/homebrew/opt/python/libexec/bin
+  $HOME/.cargo/bin
+  $HOME/.cargo/env
 )
 
 PATH=$(
