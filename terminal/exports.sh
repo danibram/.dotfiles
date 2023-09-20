@@ -4,6 +4,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export CODE_TSJS=1
 export DENO_INSTALL="$HOME/.deno"
 export EDITOR="code --wait"
+export LC_ALL=es_ES.UTF-8
 
 paths=(
   $HOME/.yarn/bin
@@ -25,6 +26,7 @@ paths=(
   /opt/homebrew/bin
   /opt/homebrew/sbin
   /opt/homebrew/opt/python/libexec/bin
+  /opt/homebrew/opt/python@3.9/libexec/bin
   $HOME/.cargo/bin
   $HOME/.cargo/env
 )
@@ -45,7 +47,7 @@ if [ -f "$HOME/.opam/opam-init/init.zsh" ]; then . $HOME/.opam/opam-init/init.zs
 
 #########
 # fnm (NodeJs Version Manager)
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd)"
 
 #########
 # gcloud configuration
