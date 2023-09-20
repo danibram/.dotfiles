@@ -24,3 +24,7 @@ ports() {
 gch() {
   git checkout "$(git branch | fzf| tr -d '[:space:]')"
 }
+
+reload() {
+  exec zsh
+}
