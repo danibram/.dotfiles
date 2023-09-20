@@ -82,6 +82,9 @@ if [[ $(uname -s) == "Darwin" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
+  echo "⚡️ Install bun"
+	curl -fsSL https://bun.sh/install | bash
+
   sh scripts/install-brew-apps.sh
 
   sh scripts/osx-defaults.sh
