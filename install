@@ -17,7 +17,7 @@ echo "👉  Cloning into: '$DOTFILES_PATH'"
 # To test that git is installed (if not macOS will prompt an installer)
 git --version
 
-# git clone -q --depth 1 https://github.com/danibram/.dotfiles.git "$DOTFILES_PATH" || echo "already cloned!"
+git clone -q --depth 1 https://github.com/danibram/.dotfiles.git "$DOTFILES_PATH" || echo "already cloned!"
 # cd "$HOME/.dotfiles" && git submodule update --init --recursive
 
 zsh $DOTFILES_PATH/init.zsh
