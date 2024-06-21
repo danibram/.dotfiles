@@ -18,6 +18,6 @@ echo "👉  Cloning into: '$DOTFILES_PATH'"
 git --version
 
 git clone -q --depth 1 https://github.com/danibram/.dotfiles.git "$DOTFILES_PATH" || echo "already cloned!"
-# cd "$HOME/.dotfiles" && git submodule update --init --recursive
+cd "$HOME/.dotfiles"
 
 zsh $DOTFILES_PATH/init.zsh
