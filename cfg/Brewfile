@@ -7,7 +7,7 @@ brew "python"
 brew "gitui"
 brew "gh" # github cli
 brew "starship" # cli
-brew "exa" # better ls
+brew "eza" # better ls
 brew "zoxide" # better cd -> alias to j
 brew "diff-so-fancy" # better git diff
 brew "mprocs" # mutliple processs manager
