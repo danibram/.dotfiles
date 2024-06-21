@@ -53,7 +53,6 @@ dotfiles=(
 	cfg/tmux.conf               ".tmux.conf"
 	cfg/gitignore_global        ".gitignore_global"
 	cfg/gitconfig               ".gitconfig"
-	cfg/hammerspoon.lua         ".hammerspoon/init.lua"
 	cfg/starship.toml           ".config/starship.toml"
 )
 
@@ -82,7 +81,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
   fi
 
   echo "⚡️ Install bun"
-	curl -fsSL https://bun.sh/install | bash
+  curl -fsSL https://bun.sh/install | bash
 
   sh scripts/install-brew-apps.sh
 
