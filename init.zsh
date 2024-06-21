@@ -50,8 +50,7 @@ function symlink::link() {
 local -A dotfiles
 dotfiles=(
 	terminal/zshrc              ".zshrc"
-	modules/ohmytmux/.tmux.conf ".tmux.conf"
-	cfg/tmux.conf.local         ".tmux.conf.local"
+	cfg/tmux.conf               ".tmux.conf"
 	cfg/gitignore_global        ".gitignore_global"
 	cfg/gitconfig               ".gitconfig"
 	cfg/hammerspoon.lua         ".hammerspoon/init.lua"
