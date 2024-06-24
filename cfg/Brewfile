@@ -6,6 +6,7 @@ brew "truncate"
 brew "python"
 brew "gitui"
 brew "gh" # github cli
+brew "k9s" # k8s cli
 brew "starship" # cli
 brew "eza" # better ls
 brew "zoxide" # better cd -> alias to j
