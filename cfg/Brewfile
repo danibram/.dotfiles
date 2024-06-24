@@ -20,6 +20,7 @@ brew "tmux" # [tmux]
 brew "tmux-mem-cpu-load" # [tmux] nice cpu plugin
 brew "reattach-to-user-namespace" # [tmux] for osx clipboard issue
 brew "pyenv" # python version manager
+brew "pnpm" # node package manager
 cask "appcleaner"
 cask "docker"
 cask "iterm2"
