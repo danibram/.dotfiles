@@ -2,7 +2,7 @@
 
 echo '🌐 Installing gcloud'
 
-VERSION='421.0.0'
+VERSION='481.0.0'
 URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-$VERSION-darwin-arm.tar.gz?hl=es"
 curl -o gcloud.tar.gz "$URL"
 
