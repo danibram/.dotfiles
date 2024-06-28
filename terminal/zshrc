@@ -11,7 +11,6 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_HIGHLIGHT_MAXLENGTH=300
 
 ulimit -n 200000
-ulimit -u 2048
 
 source $DOTFILES_PATH/terminal/aliases.sh
 source $DOTFILES_PATH/terminal/exports.sh
